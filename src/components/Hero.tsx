@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Star, ShieldCheck, ArrowRight, Quote } from "lucide-react";
+import { Star, ArrowRight, Quote } from "lucide-react";
 
 // MANUALLY VERIFIED PERMANENT IMAGE LINKS
 const testimonials = [
@@ -63,8 +63,8 @@ export function Hero() {
           alt="Luxury Taj Mahal View"
           className="h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0B3C5D]/95 via-[#0B3C5D]/70 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#F9FAFB] via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-r from-[#0B3C5D]/95 via-[#0B3C5D]/70 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-[#F9FAFB] via-transparent to-transparent" />
       </div>
 
       <div className="relative z-10 container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12 items-center">

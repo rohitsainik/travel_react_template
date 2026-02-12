@@ -1,4 +1,3 @@
-import React from "react";
 import { Instagram, Linkedin, Bookmark, ArrowUpRight } from "lucide-react";
 
 export function Footer() {
