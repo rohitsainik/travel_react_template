@@ -21,7 +21,7 @@ const testimonials = [
   {
     id: 3,
     name: "Sonia Kapoor",
-    text: "IndiVista found us a side of Kerala we never knew existed.",
+    text: "Subh Safar Holidays found us a side of Kerala we never knew existed.",
     rating: "5.0",
     img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=facearea&facepad=2&w=200&h=200&q=80",
   },

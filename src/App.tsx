@@ -2,6 +2,8 @@ import { useEffect } from 'react'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { Packages } from './components/Packages'
+import { InternationalAbout } from './components/InternationalAbout'
+import { InternationalSpecialty } from './components/InternationalSpecialty'
 import { Services } from './components/Services'
 import { About } from './components/About'
 import { Specialty } from './components/Specialty'
@@ -24,6 +26,8 @@ function App() {
       <main>
         <Hero />
         <Packages />
+        <InternationalAbout />
+        <InternationalSpecialty />
         <Services />
         <About />
         <Specialty />

@@ -1,18 +1,21 @@
 import { useState, useEffect } from "react";
 import { Menu, X, PhoneCall } from "lucide-react";
+import LOGO_URL from "../assets/Shubh-Safar-Holidays-Logo-Without-Bg.png"; // Ensure you have a logo image in this path or update accordingly
 
 const navItems = [
   { label: "Home", href: "#home" },
-  { label: "Experiences", href: "#packages" }, // Renamed for more luxury feel
-  { label: "Philosophy", href: "#services" }, // Renamed for more luxury feel
-  { label: "The Studio", href: "#about" }, // Renamed for more luxury feel
+  { label: "Experiences", href: "#packages" },
+  { label: "Philosophy", href: "#services" },
+  { label: "The Studio", href: "#about" },
 ];
+
+// Replace this URL with your actual logo path (e.g., "/assets/logo.png")
+
 
 export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Subtle scroll effect for a premium feel
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
@@ -28,18 +31,23 @@ export function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
-        {/* Brand Identity */}
-        <a href="#home" className="flex items-center gap-3 group">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0B3C5D] text-sm font-bold text-white transition-transform group-hover:scale-110">
-            IV
-          </div>
-          <div className="flex flex-col">
-            <span className="text-lg font-poppins font-bold tracking-tight text-[#0B3C5D]">
-              IndiVista<span className="text-[#F4B400]">.</span>
-            </span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-[#6B7280] font-bold leading-none">
-              Bespoke India
-            </span>
+        
+        {/* BRAND LOGO REPLACEMENT */}
+        <a href="#home" className="flex items-center group">
+          <img 
+            src={LOGO_URL} 
+            alt="Subh Safar Holidays" 
+            className="h-22 w-22 object-cover transition-transform duration-300 group-hover:scale-105"
+            // If the logo is missing, fallback to a simple styled text 
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+              e.currentTarget.nextElementSibling?.classList.remove('hidden');
+            }}
+          />
+          {/* Fallback Text (Hidden if logo loads) */}
+          <div className="hidden flex-col leading-none">
+            <span className="text-lg font-bold text-[#0B3C5D]">Subh Safar</span>
+            <span className="text-[10px] uppercase tracking-widest text-[#6B7280]">Holidays</span>
           </div>
         </a>
 
@@ -108,7 +116,7 @@ export function Header() {
                 +91 98XX-XXXXXX
               </p>
               <p className="text-lg font-bold text-[#0B3C5D]">
-                hello@indivista.com
+                hello@subhsafarholidays.com
               </p>
             </div>
           </nav>

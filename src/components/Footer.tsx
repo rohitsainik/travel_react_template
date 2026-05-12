@@ -9,15 +9,15 @@ export function Footer() {
           <div className="space-y-8">
             <div className="flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F4B400] text-[#0B3C5D] font-poppins font-bold text-lg">
-                IV
+                SS
               </div>
               <span className="text-2xl font-poppins font-bold tracking-tight">
-                IndiVista<span className="text-[#F4B400]">.</span>
+                Subh Safar Holidays<span className="text-[#F4B400]">.</span>
               </span>
             </div>
             <p className="text-white/70 text-lg leading-relaxed max-w-sm">
-              Crafting bespoke Indian odysseys for the discerning traveller who
-              seeks the extraordinary in every detail.
+              Crafting bespoke journeys across India and beyond for travellers
+              who seek the extraordinary in every detail.
             </p>
             <div className="flex gap-4">
               {[Instagram, Linkedin, Bookmark].map((Icon, idx) => (
@@ -143,7 +143,7 @@ export function Footer() {
         {/* Bottom Section: Legal & Credits */}
         <div className="pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-[11px] font-medium uppercase tracking-widest text-white/40">
-            © {new Date().getFullYear()} IndiVista Journeys • Private Travel
+            © {new Date().getFullYear()} Subh Safar Holidays • Private Travel
             Management
           </div>
 
@@ -164,7 +164,7 @@ export function Footer() {
       {/* Aesthetic Background Detail */}
       <div className="absolute bottom-0 right-0 opacity-[0.03] pointer-events-none select-none">
         <h2 className="text-[15vw] font-poppins font-bold leading-none translate-y-1/4">
-          INDIVISTA
+          SUBH SAFAR
         </h2>
       </div>
     </footer>

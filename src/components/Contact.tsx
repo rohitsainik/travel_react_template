@@ -42,7 +42,7 @@ export function Contact() {
             <span className="text-[#F4B400]">Next Masterpiece</span>
           </h2>
           <p className="text-[#6B7280] text-lg max-w-2xl">
-            Share your vision with us. Our IndiVista travel specialists will
+            Share your vision with us. Our Subh Safar travel specialists will
             reach out within 24 hours to shape your bespoke itinerary.
           </p>
         </div>
@@ -142,7 +142,7 @@ export function Contact() {
               <Globe className="absolute -right-10 -top-10 w-40 h-40 text-white/5" />
               <h3 className="text-xl font-bold mb-6 flex items-center gap-3">
                 <MapPin className="text-[#F4B400] w-6 h-6" />
-                IndiVista HQ
+                Subh Safar HQ
               </h3>
               <div className="space-y-6 relative z-10">
                 <div>
@@ -159,12 +159,12 @@ export function Contact() {
                     <Phone className="w-4 h-4" /> +91 98XX-XXXXXX
                   </p>
                 </a>
-                <a href="mailto:hello@indivista.com" className="block group">
+                <a href="mailto:hello@subhsafarholidays.com" className="block group">
                   <p className="text-white/60 text-[10px] font-bold uppercase tracking-widest mb-1">
                     Email Us
                   </p>
                   <p className="text-lg group-hover:text-[#F4B400] transition-colors flex items-center gap-2">
-                    <Mail className="w-4 h-4" /> hello@indivista.com
+                    <Mail className="w-4 h-4" /> hello@subhsafarholidays.com
                   </p>
                 </a>
               </div>

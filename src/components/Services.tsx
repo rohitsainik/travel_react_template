@@ -60,7 +60,7 @@ export function Services() {
             Everything Handled. Beautifully.
           </h2>
           <p className="text-[#6B7280] text-lg leading-relaxed">
-            IndiVista Journeys exists so you can focus on being present in each
+            Subh Safar Holidays exists so you can focus on being present in each
             moment—not on coordinating logistics. We handle the details
             end-to-end.
           </p>

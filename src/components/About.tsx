@@ -82,7 +82,7 @@ export function About() {
 
             <div className="space-y-6 text-[#6B7280] text-lg leading-relaxed">
               <p>
-                IndiVista Journeys is more than a travel agency; we are a
+                Subh Safar Holidays is more than a travel agency; we are a
                 <span className="text-[#1F2933] font-semibold">
                   {" "}
                   boutique travel studio{" "}
