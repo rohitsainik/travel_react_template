@@ -36,7 +36,7 @@ const internationalSpecialties = [
 
 export function InternationalSpecialty() {
   return (
-    <section id="international-specialty" className="py-24 bg-white font-inter">
+    <section id="international-specialty" className="pb-24 bg-white font-inter">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div className="max-w-2xl">
@@ -48,7 +48,7 @@ export function InternationalSpecialty() {
             </div>
             <h2 className="text-4xl md:text-5xl font-poppins font-bold text-[#0B3C5D] mb-6">
               Themed International Journeys <br />
-              for Discerning Travelers
+              for Discerning Travellers
             </h2>
             <p className="text-[#6B7280] text-lg leading-relaxed">
               Discover carefully chosen global travel styles that balance discovery,

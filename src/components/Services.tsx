@@ -1,128 +1,148 @@
 import { motion } from "framer-motion";
-import { Compass, Headset, Hotel, CheckCircle2 } from "lucide-react";
+import { Compass, Headset, Hotel, CheckCircle2, Sparkles } from "lucide-react";
 
 const services = [
   {
     id: "itineraries",
     title: "Curated Itineraries",
     icon: Compass,
+    accent: "bg-[#F4B400]",
     description:
-      "Every journey is designed by specialists who balance must-see icons with hidden, local-only experiences.",
+      "Every journey is designed by specialists who balance must-see icons with hidden, local-only experiences tailored to your rhythm.",
     bullets: [
-      "Tailored to your travel style and pace",
-      "Handpicked experiences, not mass-market",
+      "Bespoke pacing (Relaxed to Adventurous)",
+      "Exclusive access to 'closed-door' sites",
     ],
   },
   {
     id: "support",
-    title: "24/7 Personal Concierge",
+    title: "24/7 Concierge",
     icon: Headset,
+    accent: "bg-[#10B981]", // Success Green
     description:
-      "From flight delays to last-minute changes, your dedicated specialist is just a WhatsApp message away.",
+      "Real-time travel management. From flight re-bookings to restaurant reservations, we are your silent partners in travel.",
     bullets: [
-      "Local teams in every major Indian city",
-      "Real-time assistance during your trip",
+      "Average WhatsApp response < 10 mins",
+      "On-ground support in 40+ Indian cities",
     ],
   },
   {
     id: "stays",
-    title: "Luxury & Character Stays",
+    title: "Heritage & Soul Stays",
     icon: Hotel,
+    accent: "bg-[#0B3C5D]",
     description:
-      "Stay in boutique hotels, heritage palaces, and serene retreats that reflect the soul of the destination.",
+      "We bypass generic luxury for stays with soul—heritage palaces, boutique estates, and architectural marvels.",
     bullets: [
-      "Personally vetted stays and hosts",
-      "Priority room upgrades where available",
+      "Personally vetted for privacy & service",
+      "Complimentary room upgrades & perks",
     ],
   },
 ];
 
 export function Services() {
   return (
-    <section id="services" className="py-24 bg-white font-inter">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section id="services" className=" bg-white relative overflow-hidden font-inter pb-24">
+      {/* Aesthetic Background Element */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#F4B400]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
+      
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        
         {/* Header Section */}
-        <div className="mx-auto max-w-3xl text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex items-center justify-center gap-2 mb-4"
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-20 gap-8">
+          <div className="max-w-2xl">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="flex items-center gap-3 mb-4"
+            >
+              <Sparkles className="w-5 h-5 text-[#F4B400]" />
+              <span className="text-[#F4B400] font-bold tracking-[0.25em] uppercase text-[10px] md:text-xs">
+                The Shubh Safar Experience
+              </span>
+            </motion.div>
+            <h2 className="text-4xl md:text-6xl font-poppins font-bold text-[#0B3C5D] leading-[1.1]">
+              Everything Handled. <br />
+              <span className="text-[#F4B400]/80 italic font-medium">Beautifully.</span>
+            </h2>
+          </div>
+          
+          <motion.p 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="text-[#6B7280] text-lg max-w-sm lg:pb-2 border-l-2 border-[#F4B400]/20 pl-6"
           >
-            <span className="h-px w-8 bg-[#F4B400]"></span>
-            <span className="text-[#F4B400] font-bold tracking-[0.2em] uppercase text-xs">
-              Our Commitment
-            </span>
-            <span className="h-px w-8 bg-[#F4B400]"></span>
-          </motion.div>
-
-          <h2 className="text-4xl md:text-5xl font-poppins font-bold text-[#0B3C5D] mb-6">
-            Everything Handled. Beautifully.
-          </h2>
-          <p className="text-[#6B7280] text-lg leading-relaxed">
-            Subh Safar Holidays exists so you can focus on being present in each
-            moment—not on coordinating logistics. We handle the details
-            end-to-end.
-          </p>
+            We manage the complexity of India, so you can focus on the poetry of the journey.
+          </motion.p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <motion.div
                 key={service.id}
-                className="relative group p-8 rounded-[2rem] bg-[#F9FAFB] border border-transparent hover:border-[#0B3C5D]/10 hover:bg-white hover:shadow-[0_20px_50px_rgba(11,60,93,0.08)] transition-all duration-500"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.7 }}
+                transition={{ delay: index * 0.15, duration: 0.8, ease: "easeOut" }}
+                className="group relative"
               >
-                {/* Icon Circle */}
-                <div className="mb-8 relative">
-                  <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-[#0B3C5D] group-hover:bg-[#0B3C5D] group-hover:text-white transition-colors duration-500">
-                    <Icon className="w-6 h-6" />
+                {/* Background Card */}
+                <div className="h-full p-8 lg:p-10 rounded-[2.5rem] bg-[#F9FAFB] border border-gray-100 transition-all duration-500 group-hover:bg-white group-hover:shadow-[0_40px_80px_-20px_rgba(11,60,93,0.12)] group-hover:-translate-y-2">
+                  
+                  {/* Icon Design */}
+                  <div className="mb-10 relative inline-block">
+                    <div className={`w-16 h-16 rounded-2xl ${service.accent} flex items-center justify-center text-white shadow-lg transform transition-transform duration-500 group-hover:rotate-[10deg]`}>
+                      <Icon className="w-7 h-7" />
+                    </div>
+                    {/* Shadow Decor */}
+                    <div className={`absolute inset-0 ${service.accent} blur-xl opacity-20 scale-75 group-hover:scale-110 transition-transform`} />
                   </div>
-                  {/* Decorative dot */}
-                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-[#F4B400] rounded-full scale-0 group-hover:scale-100 transition-transform duration-500 delay-100" />
+
+                  <h3 className="text-2xl font-poppins font-bold text-[#0B3C5D] mb-5 tracking-tight">
+                    {service.title}
+                  </h3>
+
+                  <p className="text-[#6B7280] text-sm leading-relaxed mb-8 min-h-[4.5rem]">
+                    {service.description}
+                  </p>
+
+                  <ul className="space-y-4">
+                    {service.bullets.map((item) => (
+                      <li
+                        key={item}
+                        className="flex items-start gap-3 text-xs font-semibold text-[#374151]"
+                      >
+                        <div className="mt-0.5">
+                           <CheckCircle2 className="w-4 h-4 text-[#F4B400]" />
+                        </div>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
-                <h3 className="text-xl font-poppins font-bold text-[#0B3C5D] mb-4">
-                  {service.title}
-                </h3>
-
-                <p className="text-[#6B7280] text-sm leading-relaxed mb-6">
-                  {service.description}
-                </p>
-
-                <ul className="space-y-3">
-                  {service.bullets.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-3 text-xs font-medium text-[#1F2933]"
-                    >
-                      <CheckCircle2 className="w-4 h-4 text-[#F4B400] shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Bottom Accent Line */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-[#F4B400] group-hover:w-1/3 transition-all duration-500 rounded-t-full" />
+                {/* Interactive Decoration */}
+                <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="w-2 h-2 rounded-full bg-[#F4B400]" />
+                </div>
               </motion.div>
             );
           })}
         </div>
 
-        {/* Simple Trust Footer */}
+        {/* Dynamic Footer Quote */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-16 pt-8 border-t border-gray-100 text-center"
+          className="mt-8 lg:mt-20 flex flex-col items-center justify-center"
         >
-          <p className="text-[#6B7280] text-sm italic">
+          <div className="w-12 h-px bg-gray-200 " />
+          <p className="text-[#0B3C5D]/40  text-xs md:text-sm font-bold uppercase tracking-[0.3em] text-center max-w-lg leading-relaxed">
             "The best way to see India is with someone who knows its secrets."
           </p>
         </motion.div>

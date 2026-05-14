@@ -63,7 +63,7 @@ export function InternationalPackages() {
   };
 
   return (
-    <div className="py-16 max-w-7xl mx-auto px-4 overflow-hidden">
+    <div className="max-w-7xl mx-auto px-4 overflow-hidden">
       {/* HEADER WITH TOP NAVIGATION */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
         <div className="max-w-2xl">
@@ -77,7 +77,7 @@ export function InternationalPackages() {
             Global Escapes & Destinations
           </h2>
           <p className="mt-6 text-[#6B7280] text-lg leading-relaxed">
-            Explore premium international journeys designed for discerning travelers.
+            Explore premium international journeys designed for discerning travellers.
           </p>
         </div>
 

@@ -57,7 +57,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="py-24 bg-[#F9FAFB] font-inter overflow-hidden"
+      className="pb-24 bg-[#F9FAFB] font-inter overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-16 items-center">

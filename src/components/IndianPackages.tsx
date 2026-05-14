@@ -60,7 +60,7 @@ export function IndianPackages() {
   };
 
   return (
-    <div className="mb-24">
+    <div className="pb-24">
       {/* Header Section */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
         <div className="max-w-2xl">

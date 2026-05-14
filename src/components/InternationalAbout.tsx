@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Globe, MapPin, Sparkles } from "lucide-react";
+import LOGO_URL from "../assets/Shubh-Safar-About.jpg";
 
 const highlights = [
   {
@@ -27,7 +28,7 @@ const highlights = [
 
 export function InternationalAbout() {
   return (
-    <section id="international-about" className="py-24 bg-[#F9FAFB] font-inter">
+    <section id="international-about" className="pb-24 bg-[#F9FAFB] font-inter">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] items-center">
           <div>
@@ -38,7 +39,7 @@ export function InternationalAbout() {
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl font-poppins font-bold text-[#0B3C5D] mb-6">
-              Subh Safar Beyond India: <br />
+              Shubh Safar Beyond India: <br />
               Global Travel, Curated.
             </h2>
             <p className="text-[#6B7280] text-lg leading-relaxed mb-8">
@@ -77,7 +78,7 @@ export function InternationalAbout() {
           <div className="relative overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-25px_rgba(11,60,93,0.18)]">
             <div className="absolute inset-0 bg-gradient-to-br from-[#0B3C5D]/5 via-transparent to-[#F4B400]/10" />
             <img
-              src="https://res.cloudinary.com/drp8z2b1z/image/upload/v1778502405/Gemini_Generated_Image_zamdx8zamdx8zamd_awndlv.png"
+              src={LOGO_URL}
               alt="International travel overview"
               className="relative w-full h-full object-cover min-h-[420px]"
             />
