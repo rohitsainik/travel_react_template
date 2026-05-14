@@ -7,7 +7,7 @@ import {
   Star,
   ArrowRight,
 } from "lucide-react";
-import { BookingModal, type BookingPackage } from "./Bookingmodal";
+import { BookingModal, type BookingPackage } from "./BookingModal";
 
 const packages = [
   {

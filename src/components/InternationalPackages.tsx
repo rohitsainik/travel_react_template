@@ -14,7 +14,7 @@ import {
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { BookingModal, type BookingPackage } from "./Bookingmodal";
+import { BookingModal, type BookingPackage } from "./BookingModal";
 
 const internationalPackages = [
   {
@@ -59,9 +59,9 @@ export function InternationalPackages() {
   const prevRef = useRef<HTMLButtonElement>(null);
   const nextRef = useRef<HTMLButtonElement>(null);
 
-  const scrollToContact = () => {
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-  };
+  // const scrollToContact = () => {
+  //   document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  // };
 
     const [selectedPackage, setSelectedPackage] = useState<BookingPackage | null>(null);
     const [modalOpen, setModalOpen] = useState(false);
