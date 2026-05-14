@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   CalendarDays,
@@ -6,6 +7,7 @@ import {
   Star,
   ArrowRight,
 } from "lucide-react";
+import { BookingModal, type BookingPackage } from "./Bookingmodal";
 
 const packages = [
   {
@@ -55,8 +57,18 @@ const packages = [
 ];
 
 export function IndianPackages() {
-  const scrollToContact = () => {
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  const [selectedPackage, setSelectedPackage] = useState<BookingPackage | null>(null);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleCustomize = (pkg: typeof packages[0]) => {
+    setSelectedPackage({
+      title: pkg.title,
+      price: pkg.price,
+      duration: pkg.duration,
+      location: pkg.location,
+      image: pkg.image,
+    });
+    setModalOpen(true);
   };
 
   return (
@@ -83,15 +95,10 @@ export function IndianPackages() {
         <div className="hidden md:flex flex-col items-end">
           <div className="flex items-center gap-1 mb-2">
             {[...Array(5)].map((_, i) => (
-              <Star
-                key={i}
-                className="w-4 h-4 fill-[#F4B400] text-[#F4B400]"
-              />
+              <Star key={i} className="w-4 h-4 fill-[#F4B400] text-[#F4B400]" />
             ))}
           </div>
-          <p className="text-[#1F2933] font-semibold">
-            4.9/5 Guest Satisfaction
-          </p>
+          <p className="text-[#1F2933] font-semibold">4.9/5 Guest Satisfaction</p>
           <p className="text-[#6B7280] text-sm">Based on 1,200+ reviews</p>
         </div>
       </div>
@@ -107,7 +114,7 @@ export function IndianPackages() {
             transition={{ delay: index * 0.1 }}
             className="group bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(11,60,93,0.1)] transition-all duration-500 flex flex-col h-full border border-gray-100"
           >
-            {/* Image Container */}
+            {/* Image */}
             <div className="relative h-64 overflow-hidden">
               <img
                 src={pkg.image}
@@ -121,7 +128,7 @@ export function IndianPackages() {
               </div>
             </div>
 
-            {/* Content Container */}
+            {/* Content */}
             <div className="p-6 flex flex-col flex-1">
               <div className="flex items-center gap-1 text-[#6B7280] text-xs mb-3">
                 <MapPin className="w-3 h-3 text-[#F4B400]" />
@@ -155,8 +162,8 @@ export function IndianPackages() {
                 </div>
 
                 <button
-                  onClick={scrollToContact}
-                  className="w-full cursor-pointer mt-2 flex items-center justify-center gap-2 py-4 bg-[#0B3C5D] text-white rounded-2xl font-bold text-sm transition-all hover:bg-[#F4B400] active:scale-[0.98] group/btn"
+                  onClick={() => handleCustomize(pkg)}
+                  className="w-full cursor-pointer mt-2 flex items-center justify-center gap-2 py-4 bg-[#0B3C5D] text-white rounded-2xl font-bold text-sm transition-all hover:bg-[#F4B400] hover:text-[#0B3C5D] active:scale-[0.98] group/btn"
                 >
                   Customize Trip
                   <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
@@ -166,6 +173,14 @@ export function IndianPackages() {
           </motion.div>
         ))}
       </div>
+
+      {/* Reusable Booking Modal */}
+      <BookingModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        package={selectedPackage}
+        whatsappNumber="+919660283288"
+      />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
@@ -14,6 +14,7 @@ import {
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { BookingModal, type BookingPackage } from "./Bookingmodal";
 
 const internationalPackages = [
   {
@@ -60,6 +61,20 @@ export function InternationalPackages() {
 
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+    const [selectedPackage, setSelectedPackage] = useState<BookingPackage | null>(null);
+    const [modalOpen, setModalOpen] = useState(false);
+
+    const handleCustomize = (pkg: typeof internationalPackages[0]) => {
+    setSelectedPackage({
+      title: pkg.title,
+      price: pkg.price,
+      duration: pkg.duration,
+      location: pkg.location,
+      image: pkg.image,
+    });
+    setModalOpen(true);
   };
 
   return (
@@ -181,7 +196,7 @@ export function InternationalPackages() {
                   </div>
 
                   <button
-                    onClick={scrollToContact}
+                    onClick={() => handleCustomize(pkg)}
                     className="w-full mt-2 flex items-center justify-center gap-3 py-4 bg-[#0B3C5D] text-white rounded-2xl font-bold hover:bg-[#F4B400] transition-all active:scale-95 shadow-lg shadow-[#0B3C5D]/10"
                   >
                     Tailor Your Escape
@@ -211,6 +226,14 @@ export function InternationalPackages() {
           border-radius: 5px;
         }
       `}</style>
+
+      {/* Reusable Booking Modal */}
+      <BookingModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        package={selectedPackage}
+        whatsappNumber="+919660283288"
+      />
     </div>
   );
 }

@@ -49,8 +49,8 @@ export function Header() {
               className="h-10 sm:h-12 lg:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
             <div className="flex flex-col">
-              <span className="text-base sm:text-lg lg:text-xl font-bold tracking-tight text-[#0B3C5D] leading-tight">
-                Shubh Safar<span className="hidden sm:inline"> Holidays</span><span className="text-[#F4B400]">.</span>
+              <span className="text-base flex flex-col items-center md:flex-row md:gap-1 sm:text-lg lg:text-xl font-bold tracking-tight text-[#0B3C5D] leading-tight">
+                Shubh Safar<span className=" text-sm md:text-lg  sm:inline"> Holidays <span className="text-[#F4B400]">.</span> </span>
               </span>
               {/* <span className="text-[8px] sm:text-[10px] uppercase tracking-[0.22em] text-[#6B7280] font-bold leading-none mt-0.5">
                 Curated Journeys
