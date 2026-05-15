@@ -15,7 +15,6 @@ const specialties = [
     description:
       "Sacred cities, sunrise aartis on the Ganges, and restorative Ayurvedic stays in the Himalayan foothills.",
     tags: ["Varanasi", "Rishikesh", "Yoga"],
-    // Verified: Ganga Aarti at night
     image:
       "https://images.unsplash.com/photo-1561361058-c24cecae35ca?auto=format&fit=crop&w=1200&q=80",
   },
@@ -26,7 +25,6 @@ const specialties = [
     description:
       "High-altitude passes in Ladakh and camel safaris in the Thar desert with expert local safety teams.",
     tags: ["Ladakh", "Thar Desert", "Hiking"],
-    // Verified: Ladakh prayer flags & mountains
     image:
       "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=1200&q=80",
   },
@@ -37,7 +35,6 @@ const specialties = [
     description:
       "Live India’s royal history through palace stays, textile tours, and private encounters with master artisans.",
     tags: ["Rajasthan", "Hampi", "Crafts"],
-    // Verified: High-quality Hawa Mahal / Palace Architecture
     image:
       "https://images.pexels.com/photos/33797760/pexels-photo-33797760.jpeg",
   },
@@ -45,7 +42,7 @@ const specialties = [
 
 export function Specialty() {
   return (
-    <section id="specialty" className="pb-24 bg-white font-inter">
+    <section id="specialty" className="py-14 bg-white font-inter">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
@@ -71,13 +68,13 @@ export function Specialty() {
             </p>
           </div>
 
-          <motion.button
-            whileHover={{ x: 5 }}
+          <a 
+            href="#contact"
             className="hidden md:flex items-center gap-2 text-[#0B3C5D] font-bold border-b-2 border-[#F4B400] pb-1 hover:text-[#F4B400] transition-colors group cursor-pointer"
           >
             Explore All Themes{" "}
             <ArrowUpRight className="w-4 h-4 group-hover:rotate-45 transition-transform" />
-          </motion.button>
+          </a>
         </div>
 
         {/* Specialty Cards Grid */}
@@ -85,9 +82,10 @@ export function Specialty() {
           {specialties.map((item, index) => {
             const Icon = item.icon;
             return (
-              <motion.div
+              <motion.a
                 key={item.id}
-                className="group relative flex flex-col h-full bg-[#F9FAFB] rounded-[2rem] overflow-hidden border border-gray-100 hover:bg-white hover:shadow-[0_40px_80px_-15px_rgba(11,60,93,0.12)] transition-all duration-500 cursor-pointer"
+                href="#contact" // Link to your contact section
+                className="group relative flex flex-col h-full bg-[#F9FAFB] rounded-[2rem] overflow-hidden border border-gray-100 hover:bg-white hover:shadow-[0_40px_80px_-15px_rgba(11,60,93,0.12)] transition-all duration-500"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -100,7 +98,6 @@ export function Specialty() {
                     alt={item.title}
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                   />
-                  {/* Overlay for better icon visibility */}
                   <div className="absolute inset-0 bg-[#0B3C5D]/10 group-hover:bg-transparent transition-colors duration-500" />
 
                   {/* Floating Icon */}
@@ -128,7 +125,7 @@ export function Specialty() {
                     {item.description}
                   </p>
 
-                  {/* Tag Pills - Now matching your palette */}
+                  {/* Tag Pills */}
                   <div className="flex flex-wrap gap-2 pt-6 border-t border-gray-100">
                     {item.tags.map((tag) => (
                       <span
@@ -140,7 +137,7 @@ export function Specialty() {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </motion.a>
             );
           })}
         </div>

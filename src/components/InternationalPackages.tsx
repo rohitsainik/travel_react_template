@@ -78,7 +78,7 @@ export function InternationalPackages() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 overflow-hidden">
+    <div className="max-w-7xl mx-auto px-4 pt-14 overflow-hidden">
       {/* HEADER WITH TOP NAVIGATION */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
         <div className="max-w-2xl">
@@ -232,7 +232,7 @@ export function InternationalPackages() {
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}
         package={selectedPackage}
-        whatsappNumber="+919660283288"
+        whatsappNumber="+918852070596"
       />
     </div>
   );

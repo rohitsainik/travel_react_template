@@ -72,7 +72,7 @@ export function IndianPackages() {
   };
 
   return (
-    <div className="pb-24">
+    <div className="py-14">
       {/* Header Section */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
         <div className="max-w-2xl">
@@ -179,7 +179,7 @@ export function IndianPackages() {
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}
         package={selectedPackage}
-        whatsappNumber="+919660283288"
+        whatsappNumber="+918852070596"
       />
     </div>
   );

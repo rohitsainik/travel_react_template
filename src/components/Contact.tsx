@@ -236,7 +236,7 @@ export function Contact() {
   const [formData, setFormData] = useState(INITIAL_FORM);
   const [submitted, setSubmitted] = useState(false);
 
-  const WHATSAPP_NUMBER = "+919660283288";
+  const WHATSAPP_NUMBER = "+918852070596";
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -264,7 +264,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="pb-24 bg-[#F9FAFB] font-inter overflow-hidden">
+    <section id="contact" className="py-14 bg-[#F9FAFB] font-inter overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="mb-12">
           <motion.div
@@ -415,16 +415,16 @@ export function Contact() {
                     <Phone className="w-4 h-4" /> +91 88520 70596
                   </p>
                 </a>
-                <a href="mailto:hello@subhsafarholidays.com" className="block group">
+                <a href="mailto:bhuvan@shubhsafar.online" className="block group">
                   <p className="text-white/60 text-[10px] font-bold uppercase tracking-widest mb-1">Email Us</p>
                   <p className="text-lg group-hover:text-[#F4B400] transition-colors flex items-center gap-2">
-                    <Mail className="w-4 h-4" /> hello@subhsafarholidays.com
+                    <Mail className="w-4 h-4" /> bhuvan@shubhsafar.online
                   </p>
                 </a>
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-[2rem] border border-gray-100 shadow-sm flex items-center gap-4">
+            {/* <div className="bg-white p-6 rounded-[2rem] border border-gray-100 shadow-sm flex items-center gap-4">
               <div className="bg-[#F4B400]/10 p-3 rounded-xl">
                 <MessageSquare className="text-[#F4B400] w-5 h-5" />
               </div>
@@ -432,9 +432,9 @@ export function Contact() {
                 <h4 className="font-bold text-[#0B3C5D] text-sm">Real-time Concierge</h4>
                 <p className="text-xs text-[#6B7280]">WhatsApp response: &lt; 15 mins</p>
               </div>
-            </div>
+            </div> */}
 
-            <div className="flex items-center gap-3 pt-2">
+            <div className="flex justify-center items-center gap-3 pt-2">
               <a href="https://www.instagram.com/shubhsafarholidays?igsh=b3V5dWg3cG4zNDY1" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-white border border-gray-100 flex items-center justify-center text-[#0B3C5D] hover:border-[#F4B400] hover:text-[#F4B400] transition-all shadow-sm">
                 <Instagram size={18} />
               </a>

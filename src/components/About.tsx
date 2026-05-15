@@ -57,7 +57,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="pb-24 bg-[#F9FAFB] font-inter overflow-hidden"
+      className="py-14  bg-[#F9FAFB] font-inter overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -76,8 +76,8 @@ export function About() {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-poppins font-bold text-[#0B3C5D] leading-tight mb-8">
-              Your Premier Partner for <br />
-              <span className="text-[#F4B400]">Authentic Indian</span> Discovery
+              Your Premier Partner for  
+              <span className="text-[#F4B400]"> Authentic Indian</span> Discovery
             </h2>
 
             <div className="space-y-6 text-[#6B7280] text-lg leading-relaxed">

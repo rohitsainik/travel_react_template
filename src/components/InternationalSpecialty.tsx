@@ -36,7 +36,7 @@ const internationalSpecialties = [
 
 export function InternationalSpecialty() {
   return (
-    <section id="international-specialty" className="pb-24 bg-white font-inter">
+    <section id="international-specialty" className="py-14 bg-white font-inter">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div className="max-w-2xl">
@@ -47,7 +47,7 @@ export function InternationalSpecialty() {
               <div className="h-px w-12 bg-[#F4B400]"></div>
             </div>
             <h2 className="text-4xl md:text-5xl font-poppins font-bold text-[#0B3C5D] mb-6">
-              Themed International Journeys <br />
+              Themed International Journeys 
               for Discerning Travellers
             </h2>
             <p className="text-[#6B7280] text-lg leading-relaxed">
@@ -61,14 +61,16 @@ export function InternationalSpecialty() {
           {internationalSpecialties.map((item, index) => {
             const Icon = item.icon;
             return (
-              <motion.div
+              <motion.a
                 key={item.id}
+                href="#contact" // Link to contact section
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15, duration: 0.7 }}
-                className="group relative flex flex-col h-full bg-[#F9FAFB] rounded-[2rem] overflow-hidden border border-gray-100 hover:bg-white hover:shadow-[0_40px_80px_-15px_rgba(11,60,93,0.12)] transition-all duration-500 cursor-pointer"
+                className="group relative flex flex-col h-full bg-[#F9FAFB] rounded-[2rem] overflow-hidden border border-gray-100 hover:bg-white hover:shadow-[0_40px_80px_-15px_rgba(11,60,93,0.12)] transition-all duration-500"
               >
+                {/* Image & Icon Container */}
                 <div className="h-64 w-full overflow-hidden relative">
                   <img
                     src={item.image}
@@ -81,6 +83,7 @@ export function InternationalSpecialty() {
                   </div>
                 </div>
 
+                {/* Content */}
                 <div className="flex flex-col flex-grow p-8">
                   <h3 className="text-xl font-poppins font-bold text-[#0B3C5D] mb-4 group-hover:text-[#F4B400] transition-colors">
                     {item.title}
@@ -88,6 +91,8 @@ export function InternationalSpecialty() {
                   <p className="text-[#6B7280] text-[15px] leading-relaxed mb-8 flex-grow">
                     {item.description}
                   </p>
+                  
+                  {/* Tags */}
                   <div className="flex flex-wrap gap-2 pt-6 border-t border-gray-100">
                     {item.tags.map((tag) => (
                       <span
@@ -99,7 +104,7 @@ export function InternationalSpecialty() {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </motion.a>
             );
           })}
         </div>

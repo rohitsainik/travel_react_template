@@ -27,7 +27,7 @@ export interface BookingModalProps {
   isOpen: boolean;
   onClose: () => void;
   package: BookingPackage | null;
-  whatsappNumber?: string; // e.g. "+919660283288"
+  whatsappNumber?: string; // e.g. "+918852070596"
 }
 
 // ─── Mini Calendar ────────────────────────────────────────────────────────────
@@ -136,7 +136,7 @@ export function BookingModal({
   isOpen,
   onClose,
   package: pkg,
-  whatsappNumber = "+919660283288",
+  whatsappNumber = "+918852070596",
 }: BookingModalProps) {
   const [form, setForm] = useState(INITIAL);
   const [travelDate, setTravelDate] = useState<Date | null>(null);

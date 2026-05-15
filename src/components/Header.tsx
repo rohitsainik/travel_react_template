@@ -4,23 +4,21 @@ import LOGO_URL from "../assets/Shubh-Safar-Holidays-Logo-Without-Bg.png";
 
 const navItems = [
   { label: "Home", href: "#home" },
-  { label: "Experiences", href: "#packages" },
-  { label: "Philosophy", href: "#services" },
-  { label: "The Studio", href: "#about" },
+  { label: "About", href: "#about" },
+  { label: "Experience", href: "#packages" },
+  { label: "Service", href: "#services" },
 ];
 
 export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Handle scroll state for header styling
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // STOPS BACKGROUND SCROLL: This is critical for mobile menus
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";
@@ -41,21 +39,16 @@ export function Header() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between">
           
-          {/* BRAND IDENTITY */}
-          <a href="#home" className="flex items-center gap-3 group relative z-[110]">
+          {/* BRAND IDENTITY - Forced to Single Line */}
+          <a href="#home" className="flex items-center gap-3 group relative z-[110] whitespace-nowrap">
             <img 
               src={LOGO_URL} 
               alt="Shubh Safar Holidays" 
               className="h-10 sm:h-12 lg:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
-            <div className="flex flex-col">
-              <span className="text-base flex flex-col items-center md:flex-row md:gap-1 sm:text-lg lg:text-xl font-bold tracking-tight text-[#0B3C5D] leading-tight">
-                Shubh Safar<span className=" text-sm md:text-lg  sm:inline"> Holidays <span className="text-[#F4B400]">.</span> </span>
-              </span>
-              {/* <span className="text-[8px] sm:text-[10px] uppercase tracking-[0.22em] text-[#6B7280] font-bold leading-none mt-0.5">
-                Curated Journeys
-              </span> */}
-            </div>
+            <h1 className="text-base sm:text-lg lg:text-xl font-bold tracking-tight text-[#0B3C5D] flex items-center">
+              Shubh Safar Holidays<span className="text-[#F4B400] ml-0.5">.</span>
+            </h1>
           </a>
 
           {/* DESKTOP NAV */}
@@ -97,22 +90,21 @@ export function Header() {
         </div>
       </header>
 
-      {/* MOBILE MENU OVERLAY - Fixed to Viewport */}
+      {/* MOBILE MENU OVERLAY */}
       <div
         className={`fixed inset-0 z-[90] bg-white transition-transform duration-500 ease-in-out lg:hidden ${
           open ? "translate-y-0" : "-translate-y-full"
         }`}
-        style={{ height: '100dvh' }} // Uses dynamic viewport height
+        style={{ height: '100dvh' }}
       >
         <div className="flex flex-col h-full pt-32 pb-10 px-8">
-          {/* Navigation Links */}
           <nav className="flex flex-col gap-6">
-            {navItems.map((item, idx) => (
+            {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className={`text-2xl font-bold text-[#0B3C5D] border-b border-gray-50 pb-4 transition-all duration-500 delay-[${idx * 100}ms] ${
+                className={`text-2xl font-bold text-[#0B3C5D] border-b border-gray-50 pb-4 transition-all duration-500 ${
                   open ? "translate-x-0 opacity-100" : "-translate-x-4 opacity-0"
                 }`}
               >
@@ -121,7 +113,6 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Bottom Actions Area */}
           <div className="mt-auto space-y-8">
             <a
               href="#contact"
@@ -135,21 +126,9 @@ export function Header() {
               <p className="text-[10px] font-bold uppercase tracking-widest text-[#6B7280]">
                 Contact the Studio
               </p>
-              <div className="text-base font-bold text-[#0B3C5D] space-y-1">
-                <a 
-      href="tel:+918852070596" 
-      className="hover:text-[#F4B400] transition-colors inline-block w-fit"
-    >
-      +91 88520 70596
-    </a>
-    
-    {/* Email Link */}
-    <a 
-      href="mailto:hello@subhsafarholidays.com" 
-      className="hover:text-[#F4B400] transition-colors inline-block w-fit"
-    >
-      hello@subhsafarholidays.com
-    </a>
+              <div className="text-base font-bold text-[#0B3C5D] flex flex-col gap-1">
+                <a href="tel:+918852070596" className="hover:text-[#F4B400] transition-colors w-fit">+91 88520 70596</a>
+                <a href="mailto:hello@subhsafarholidays.com" className="hover:text-[#F4B400] transition-colors w-fit text-sm">hello@subhsafarholidays.com</a>
               </div>
             </div>
           </div>

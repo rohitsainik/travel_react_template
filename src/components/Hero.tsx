@@ -6,39 +6,33 @@ import { Star, ArrowRight, Quote } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    name: "Eleanor Wright",
+    name: "Shourya Mundaniya",
     text: "A truly royal experience in Udaipur. Every detail was perfect.",
     rating: "5.0",
-    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=facearea&facepad=2&w=200&h=200&q=80",
+    img: "https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?auto=format&fit=facearea&facepad=2&w=200&h=200&q=80",
   },
   {
     id: 2,
-    name: "James Harrington",
+    name: "Mahi Jain",
     text: "The Himalayan retreat was breathtaking. Exceptional service.",
     rating: "4.9",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=facearea&facepad=2&w=200&h=200&q=80",
+    img: "https://plus.unsplash.com/premium_photo-1682089810582-f7b200217b67?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 3,
     name: "Sonia Kapoor",
     text: "Subh Safar Holidays found us a side of Kerala we never knew existed.",
     rating: "5.0",
-    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=facearea&facepad=2&w=200&h=200&q=80",
+    img: "https://img.magnific.com/free-photo/indian-model-showing-okay-sign-thumbs-up-gesture-studio-giving-like-agreeing-with-optimistic-idea-friendly-positive-approval-ok-symbol-accept-excellent-agreement_482257-43625.jpg",
   },
   {
     id: 4,
     name: "Marcus Thorne",
     text: "Seamless logistics and world-class heritage properties.",
     rating: "4.8",
-    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=200&h=200&q=80",
+    img: "https://img.magnific.com/free-photo/closeup-young-hispanic-man-casuals-studio_662251-600.jpg",
   },
-  {
-    id: 5,
-    name: "Clara Rossi",
-    text: "The most culturally immersive journey I have ever taken.",
-    rating: "5.0",
-    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=facearea&facepad=2&w=200&h=200&q=80",
-  },
+
 ];
 
 export function Hero() {
@@ -54,7 +48,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen overflow-hidden bg-[#F9FAFB] flex items-center"
+      className="relative min-h-screen overflow-hidden bg-[#F9FAFB] pb-4 flex items-center"
     >
       {/* Background Layer - High Performance Link */}
       <div className="absolute inset-0 z-0">

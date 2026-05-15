@@ -3,7 +3,7 @@ import { InternationalPackages } from './InternationalPackages';
 
 export function Packages() {
   return (
-    <section id="packages" className="pb-24 bg-[#F9FAFB] font-inter">
+    <section id="packages" className="py-14 bg-[#F9FAFB] font-inter">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <IndianPackages />
         <InternationalPackages />

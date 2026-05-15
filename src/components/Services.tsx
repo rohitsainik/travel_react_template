@@ -42,7 +42,7 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className=" bg-white relative overflow-hidden font-inter pb-24">
+    <section id="services" className=" bg-white relative overflow-hidden font-inter py-14">
       {/* Aesthetic Background Element */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#F4B400]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
       

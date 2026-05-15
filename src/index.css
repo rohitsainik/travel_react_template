@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fix for the header covering the section title */
+section {
+  scroll-margin-top: 80px; /* Adjust this to match your header height */
+}
+
 /* Global base styles for Subh Safar Holidays */
 body {
   margin: 0;
@@ -136,3 +145,4 @@ body {
   outline: 2px solid #F4B400;
   outline-offset: 2px;
 }
+

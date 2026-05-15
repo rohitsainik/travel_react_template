@@ -28,9 +28,9 @@ const highlights = [
 
 export function InternationalAbout() {
   return (
-    <section id="international-about" className="pb-24 bg-[#F9FAFB] font-inter">
+    <section id="international-about" className="py-14 bg-[#F9FAFB] font-inter">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] items-center">
+        <div className="grid gap-12 lg:grid-cols-[1.4fr_0.6fr] items-center">
           <div>
             <div className="flex items-center gap-2 mb-4">
               <span className="h-px w-8 bg-[#F4B400]"></span>
