@@ -25,14 +25,7 @@ const testimonials = [
     rating: "5.0",
     img: "https://img.magnific.com/free-photo/indian-model-showing-okay-sign-thumbs-up-gesture-studio-giving-like-agreeing-with-optimistic-idea-friendly-positive-approval-ok-symbol-accept-excellent-agreement_482257-43625.jpg",
   },
-  {
-    id: 4,
-    name: "Marcus Thorne",
-    text: "Seamless logistics and world-class heritage properties.",
-    rating: "4.8",
-    img: "https://img.magnific.com/free-photo/closeup-young-hispanic-man-casuals-studio_662251-600.jpg",
-  },
-
+ 
 ];
 
 export function Hero() {
@@ -45,12 +38,17 @@ export function Hero() {
     return () => clearInterval(timer);
   }, []);
 
+  // WhatsApp link generator configuration
+  const whatsappNumber = "918852070596";
+  const customMessage = encodeURIComponent("Hii, I would like to know about Shubh Safar Holidays packages.");
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${customMessage}`;
+
   return (
     <section
       id="home"
       className="relative min-h-screen overflow-hidden bg-[#F9FAFB] pb-4 flex items-center"
     >
-      {/* Background Layer - High Performance Link */}
+      {/* Background Layer */}
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=2000&q=100"
@@ -101,10 +99,16 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            <button className="bg-[#F4B400] text-[#0B3C5D] px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-white transition-all group active:scale-95 shadow-lg">
+            {/* Clickable CTA configured to open WhatsApp in a new tab */}
+            <a 
+              href={whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="bg-[#F4B400] text-[#0B3C5D] px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-white transition-all group active:scale-95 shadow-lg decoration-none"
+            >
               Begin Your Journey
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
           </motion.div>
         </div>
 

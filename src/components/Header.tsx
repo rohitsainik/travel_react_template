@@ -128,7 +128,7 @@ export function Header() {
               </p>
               <div className="text-base font-bold text-[#0B3C5D] flex flex-col gap-1">
                 <a href="tel:+918852070596" className="hover:text-[#F4B400] transition-colors w-fit">+91 88520 70596</a>
-                <a href="mailto:hello@subhsafarholidays.com" className="hover:text-[#F4B400] transition-colors w-fit text-sm">hello@subhsafarholidays.com</a>
+                <a href="mailto:bhuvan@shubhsafar.online" className="hover:text-[#F4B400] transition-colors w-fit text-sm">bhuvan@shubhsafar.online</a>
               </div>
             </div>
           </div>

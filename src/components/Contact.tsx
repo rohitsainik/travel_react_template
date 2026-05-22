@@ -407,7 +407,7 @@ export function Contact() {
               <div className="space-y-6 relative z-10">
                 <div>
                   <p className="text-white/60 text-[10px] font-bold uppercase tracking-widest mb-1">Office Locations</p>
-                  <p className="text-lg">Udaipur, India</p>
+                  <p className="text-lg">54, Ganesh Ghati , Near Gadiya Devra , Udaipur , Rajasthan</p>
                 </div>
                 <a href="tel:+918852070596" className="block group">
                   <p className="text-white/60 text-[10px] font-bold uppercase tracking-widest mb-1">Direct Contact</p>
